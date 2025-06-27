@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Phonk";
+    src: url("fonts/Phonk.ttf");
+}
+
+@media (max-width: 768px) {
+    .section--about {
+        grid-template-columns: 1fr;
+    }
+
+    .section--about .heading {
+        grid-column: span 1;
+    }
+}
+
+:root {
+    --font-phonk: "Phonk", sans-serif;
+    --font-mont: "Montserrat", sans-serif;
+    --border-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.4);
+    --button-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--font-mont);
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+     background: linear-gradient(to left, #eff8ce, #f5d8a2);
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.6rem;
+    z-index: 1000;
+    font-family: var(--font-mont);
+    box-shadow: var(--border-shadow);
+}
+
+.navbar__link {
+     background: linear-gradient(to left, #eff8ce, #f5d8a2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section--active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section--hero {
+    background: 
+        linear-gradient(to left, #eff8cecc, #f5d8a2cc),
+        url('../img/sauce.JPG') center center / cover no-repeat;
+    font-size: 3rem;
+    text-shadow: var(--text-shadow);
+}
+
+.full-height-left-image {
+      height: 60vh;
+    width: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.section--about {
+     background: linear-gradient(to left, #eff8ce, #f5d8a2);
+}
+
+.section--contact {
+     background: linear-gradient(to left, #eff8ce, #f5d8a2);
+}
+
+.heading {
+    font-family: var(--font-phonk);
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+
+.form__input,
+.form__textarea,
+.form__button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: var(--font-mont);
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.form__button {
+    background-color: rgb(85, 85, 85);
+     background: linear-gradient(to left, #eff8ce, #f5d8a2);
+    cursor: pointer;
+    box-shadow: var(--button-shadow);
+    transition: all 0.3s ease;
+}
+
+.form__button:hover {
+    background-color: #333;
+}   

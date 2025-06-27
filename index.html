@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onepager Opdr</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar__link" href="#section1">Homepagina</a>
+        <a class="navbar__link" href="#section2">Mijn Skills</a>
+        <a class="navbar__link" href="#section3">Contacteer mij</a>
+    </nav>
+   <section id="section1" class="section section--hero">
+     <img src="img/tyty.png" alt="Foto van Tyrone" class="full-height-left-image">
+    <h1 class="heading heading--hero">Tyrone Offei</h1>
+</section>
+
+
+    <section id="section2" class="section section--about">
+        <h2 class="heading heading--about">Over mij</h2>
+        <p class="paragraph paragraph--about">Ik ben een 17 jarige opkomende software developer. 
+          Ik hou van anime. slapen en buiten zijn. Ook ik vind dat je gewoon van het leven moet genieten en niet te veel 'overthinken'.</p>
+    </section>
+
+    <section id="section3" class="section section--contact">
+        <h2 class="heading heading--contact">Contactformulier</h2>
+        <form class="form" id="contactForm">
+            <input class="form__input" type="text" name="name" placeholder="Naam" required>
+            <input class="form__input" type="email" name="email" placeholder="Email" required>
+            <textarea class="form__textarea" name="message" placeholder="Bericht" required></textarea>
+            <input type="hidden" name="access_key" value="db91daa8-9434-49d4-811e-6944ea9030e5">
+            <button class="form__button" type="submit">Verstuur</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+</body>
+</html>
